@@ -1,5 +1,5 @@
 :root {
-    --autohide-sidebar-extended: 230px; /* width of tab panel shown */
+    --autohide-sidebar-extended: 300px; /* width of tab panel shown */
     --autohide-sidebar-collapsed: 34px; /* width of tab panel hidden */
     --sidebar-height: 100vh;
 }
@@ -27,16 +27,16 @@
   width: var(--autohide-sidebar-extended) !important;
 }
 
-/* normal website page right margin */
+/* normal website page right margin (FIXED TARGET) */
 #main-window:not([extradragspace="true"])
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden])
-~ #appcontent {
-    margin-right: var(--autohide-sidebar-collapsed);
+~ #tabbrowser-tabbox {
+    margin-right: var(--autohide-sidebar-collapsed) !important;
 }
 /* when youtube full screen */
 #main-window:not([extradragspace="true"])[inFullscreen][inDOMFullscreen] 
 #sidebar-box[sidebarcommand="_3c078156-979c-498b-8990-85f7987dd929_-sidebar-action"]:not([hidden]) 
-~ #appcontent {
+~ #tabbrowser-tabbox {
   margin-right: 0 !important;
 }
 
